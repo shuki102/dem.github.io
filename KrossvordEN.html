@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Новогодний кроссворд</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #ffd700;
+        }
+        .crossword-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+        }
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        td {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #ccc;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 18px;
+        }
+        input[type=text] {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-transform: uppercase;
+            font-size: inherit;
+        }
+        .clues {
+            max-width: 300px;
+            line-height: 1.6;
+        }
+        .clue-number::before {
+            content: attr(data-clue);
+            font-weight: bold;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+<h1>Новогодний кроссворд</h1>
+<div class="crossword-container">
+    <!-- Кроссворд -->
+    <table id="crossword">
+        <tr><td></td><td>1</td><td></td><td></td><td>2</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td>4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td>5</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td>6</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td>7</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>8</td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>9</td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>10</td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    </table>
+
+    <!-- Подсказки -->
+    <div class="clues">
+        <h2>Подсказки:</h2>
+        <p class="clue-number" data-clue="1">Что зажигают на Новый Год?</p>
+        <p class="clue-number" data-clue="2">Главный зимний праздник.</p>
+        <p class="clue-number" data-clue="3">Символ праздника с длинной бородой.</p>
+        <p class="clue-number" data-clue="4">Дедушка помогает детям писать письма этому персонажу.</p>
+        <p class="clue-number" data-clue="5">Деревце, украшенное игрушками.</p>
+        <p class="clue-number" data-clue="6">Хрустальные украшения на ёлке.</p>
+        <p class="clue-number" data-clue="7">Горячий напиток зимой.</p>
+        <p class="clue-number" data-clue="8">Покрытие дорог зимой.</p>
+        <p class="clue-number" data-clue="9">Фигуры из снега и льда.</p>
+        <p class="clue-number" data-clue="10">Часы показывают ровно полночь в ночь Нового Года.</p>
+    </div>
+</div>
+<script>
+document.querySelectorAll('td').forEach(td => {
+    if (!td.textContent.trim()) { // Если ячейка пустая
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.maxLength = 1;
+        td.appendChild(input);
+    }
+});
+</script>
+</body>
+</html>
