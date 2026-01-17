@@ -1,0 +1,11 @@
+<head>
+  <meta charset="UTF-8" />
+  <title>Моя работа</title>
+  <style>
+    body {
+      background-color: ; #fff5f7/* ← это цвет фона */
+      margin: 0;
+      padding: 20px;
+    }
+  </style>
+</head>
