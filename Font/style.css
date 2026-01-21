@@ -1,4 +1,10 @@
 /* style.css */
+@font-face {
+	font-family: “Pudelinka”;
+	src: url(”Fonts/pudelinka.ttf” ) format('truetype’);
+	font-weight: normal;
+	font-style: normal;
+}
 
 body {
   background-color: #e6f7ff; /* нежно-голубой фон */
@@ -31,4 +37,9 @@ code {
 
 strong {
   color: #0d4a8f;
-}
+} 
+p.zz {
+  font-family: “Pudelinka”
+} 
+  
+  
