@@ -1,7 +1,7 @@
 /* style.css */
 @font-face {
-	font-family: “Pudelinka”;
-	src: url(”Fonts/pudelinka.ttf” ) format('truetype’);
+	font-family: "Pudelinka";
+	src: url("Font/pudelinka.ttf" ) format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -39,7 +39,7 @@ strong {
   color: #0d4a8f;
 } 
 p.zz {
-  font-family: “Pudelinka”
+  font-family: "Pudelinka";
 } 
   
   
